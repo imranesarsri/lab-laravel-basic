@@ -1,1 +1,1 @@
-# lab-laravel-basic
+# lab laravel basic
