@@ -45,7 +45,7 @@
                             </div>
 
                             <div class="card-footer">
-                                <a href="{{ route('tâch.index') }}" class="btn btn-default">annuler</a>
+                                <a href="{{ route('tâches.index') }}" class="btn btn-default">annuler</a>
                                 <button type="submit" class="btn btn-primary">update</button>
                             </div>
                         </form>
