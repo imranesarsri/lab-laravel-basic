@@ -10,7 +10,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Ajouter Une Tâche</h3>
                         </div>
-                        <form action="{{ route('store') }}" method="post">
+                        <form action="{{ route('tâches.store') }}" method="post">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
@@ -41,7 +41,7 @@
                             </div>
 
                             <div class="card-footer">
-                                <a href="{{ route('index') }}" class="btn btn-default">annuler</a>
+                                <a href="{{ route('tâches.index') }}" class="btn btn-default">annuler</a>
                                 <button type="submit" class="btn btn-primary">Ajouter</button>
                             </div>
                         </form>

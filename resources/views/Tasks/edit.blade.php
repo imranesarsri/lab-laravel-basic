@@ -11,7 +11,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Edit Tâche </h3>
                         </div>
-                        <form action="{{ route('update', ['task' => $task->id]) }}" method="post">
+                        <form action="{{ route('tâches.update', ['tâch' => $task->id]) }}" method="post">
                             @csrf
                             @method('put')
                             <div class="card-body">
@@ -45,7 +45,7 @@
                             </div>
 
                             <div class="card-footer">
-                                <a href="{{ route('index') }}" class="btn btn-default">annuler</a>
+                                <a href="{{ route('tâch.index') }}" class="btn btn-default">annuler</a>
                                 <button type="submit" class="btn btn-primary">update</button>
                             </div>
                         </form>

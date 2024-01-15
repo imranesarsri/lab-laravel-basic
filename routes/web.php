@@ -18,3 +18,5 @@ use App\Http\Controllers\TaskController;
 Route::get('/', function () {
     return view('Home');
 });
+
+Route::resource('tâches', TaskController::class);

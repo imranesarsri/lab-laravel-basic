@@ -23,7 +23,7 @@
                 </div>
                 <div class="row ">
                     <div class="d-flex justify-content-end ">
-                        <a href="{{ route('index') }}" class="btn btn-md btn-secondary">Retour</a>
+                        <a href="{{ route('tâches.index') }}" class="btn btn-md btn-secondary">Retour</a>
                     </div>
                 </div>
             </div>

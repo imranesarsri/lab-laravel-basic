@@ -16,6 +16,11 @@ class TaskController extends Controller
     public function index(Request $request)
     {
 
+        $Projects = Project::all();
+
+        $Tasks = Task::with('project')->get();
+        return view('Tasks.index', compact('Tasks', 'Projects'));
+
 
     }
 

@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="float-sm-right">
-                        <a href="{{ route('create') }}" class="btn btn btn-primary">Ajouter tâche</a>
+                        <a href="{{ route('tâches.create') }}" class="btn btn btn-primary">Ajouter tâche</a>
                     </div>
                 </div>
             </div>
