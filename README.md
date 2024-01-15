@@ -2,10 +2,10 @@
 
 ## Travail à faire
 - install `adminLTE` by npm
-- Ajouter la base de données incluant la table des projets dans les `seeders`
-- Créer le `CRUD` des tâches
-- Ajouter la `pagination`
-- Inclure la `recherche` et `filter` en utilisant `AJAX`
+- Add the database including the projects table in the `seeders`
+- Create the `CRUD` of the tasks
+- Add `pagination`
+- Include `search` and `filter` using `AJAX`
 
 ## Présentation :
 [Présentation Live coding Lab Laravel Basic](https://docs.google.com/presentation/d/176TlPBFBSugG85ieaXXGPzOTf3MoXjWpkF5mYHJykJQ/edit?usp=sharing)
@@ -189,5 +189,29 @@ php artisan db:seed
 ```
 [Reference Laravel seeders](https://laravel.com/docs/10.x/seeding#writing-seeders)
 ___
+## 5. Create the CRUD of the tasks 
+### Controllers
+```bash
+php artisan make:controller TaskController -r
+```
 
+## Request
+```bash
+php artisan make:request FormTaskRequest
+```
 
+## Views
+```bash
+php artisan make:view Tasks.index
+php artisan make:view Tasks.create
+php artisan make:view Tasks.edit
+php artisan make:view Tasks.show
+php artisan make:view Tasks.search
+php artisan make:view Tasks.table
+
+php artisan make:view Layouts.Layout
+php artisan make:view Layouts.Footer
+php artisan make:view Layouts.Navbar
+php artisan make:view Layouts.Sidebar
+
+```
