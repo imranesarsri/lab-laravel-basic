@@ -17,10 +17,27 @@ class TaskController extends Controller
     {
 
         $Projects = Project::all();
-
         $Tasks = Task::with('project')->get();
         return view('Tasks.index', compact('Tasks', 'Projects'));
+    }
 
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        $Projects = Project::all();
+        return view('Tasks.create', compact('Projects'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(FormTaskRequest $request)
+    {
+        // dd($request->validated());
+        Task::create($request->validated());
+        return redirect('tâches')->with('success', 'Tâche créée avec succès !');
 
     }
 
