@@ -48,7 +48,7 @@ npm run dev
 Open your Laravel layout file (for example, resources/views/layouts/app.blade.php) and include the Vite assets:
 
 ```bash
-@vite(['my-vite-project/src/main.js'])
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 ```
 ## 3. Installing FontAwesome Icons 
 ```bash
