@@ -14,10 +14,10 @@
             <div class="col-md-6 offset-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $task->name }}</h5>
-                        <p class="card-text">{{ $task->description }}</p>
+                        <h5 class="card-title">{{ $tâch->name }}</h5>
+                        <p class="card-text">{{ $tâch->description }}</p>
                         <div class="tags mt-3">
-                            <span class="badge badge-primary">{{ $task->project->name }}</span>
+                            <span class="badge badge-primary">{{ $tâch->project->name }}</span>
                         </div>
                     </div>
                 </div>

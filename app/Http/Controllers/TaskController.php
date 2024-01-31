@@ -17,7 +17,7 @@ class TaskController extends Controller
     {
 
         $Projects = Project::all();
-        $Tasks = Task::with('project')->get();
+        $Tasks = Task::with('project')->paginate(5);
         return view('Tasks.index', compact('Tasks', 'Projects'));
     }
 
@@ -43,26 +43,32 @@ class TaskController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Task $task)
+    public function edit(Task $tâch)
     {
         $Projects = Project::all();
-        return view('Tasks.edit', compact('task', 'Projects'));
+        return view('Tasks.edit', compact('tâch', 'Projects'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(FormTaskRequest $request, Task $task)
+    public function update(FormTaskRequest $request, Task $tâch)
     {
-        // dd($task);
-        $task->update($request->validated());
-        return redirect('/')->with('success', 'Tâche update avec succès !');
+        // dd($tâch);
+        $tâch->update($request->validated());
+        return redirect('/tâches')->with('success', 'Tâche update avec succès !');
     }
 
-    public function show(Task $task)
+    public function show(Task $tâch)
     {
         $Projects = Project::all();
-        return view('Tasks.show', compact('task', 'Projects'));
+        return view('Tasks.show', compact('tâch', 'Projects'));
+    }
+
+    public function destroy(Task $tâch)
+    {
+        $tâch->delete();
+        return redirect('/tâches')->with('success', 'Tâche supprimée avec succès !');
     }
 
 

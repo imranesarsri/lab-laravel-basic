@@ -53,7 +53,6 @@
                                         aria-label="Recherche" aria-describedby="basic-addon1" id="search-input">
                                     <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
                                 </div>
-
                             </div>
                         </div>
                         <div id="search_ajax">
